@@ -11,11 +11,16 @@ public class Menu {
         verificar();
     }
 
-    public static boolean verificar() {
+    public static void verificar() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o número e retorno se é par: ");
         int num_a_verificar = scanner.nextInt();
-        return num_a_verificar % 2 == 0;
+
+        if (num_a_verificar %2 == 0) {
+            System.out.println(num_a_verificar + " é par");
+        } else {
+            System.out.println(num_a_verificar + " é impar");
+        }
 
     }
 
