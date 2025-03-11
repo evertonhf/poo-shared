@@ -8,6 +8,7 @@ public class Menu {
         System.out.println("1 - SOMA");
 
         soma();
+        inverterPalavra();
     }
 
     public static void soma() {
@@ -19,4 +20,16 @@ public class Menu {
 
         System.out.println("A soma dos números é: " + (num1 + num2));
     }
+
+    public static void inverterPalavra() {
+        Scanner read = new Scanner(System.in);
+        System.out.println("Digite uma PALAVRA: ");
+        String txl = read.nextLine();
+
+        StringBuilder palavraInvertida = new StringBuilder(txl);
+
+        System.out.println("Palavra invertida: " + palavraInvertida.reverse().toString());
+    }
 }
+
+
