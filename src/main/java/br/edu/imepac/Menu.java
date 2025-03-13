@@ -7,7 +7,9 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         System.out.println("MENU ------ ");
         System.out.println("1 - SOMA");
-        System.out.println("2 - Fatorial");
+        System.out.println("2 - PORCENTAGEM");
+        System.out.println("3 - Fatorial");
+
 
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
@@ -15,10 +17,12 @@ public class Menu {
         if (opcao == 1) {
             soma();
         } else if (opcao == 2) {
+            porcentagem();
+        }  else if (opcao == 2) {
             fatoracao();
-        } else {
-            System.out.println("Opção inválida!");
-        }
+        }else {
+                System.out.println("Opção inválida!");
+            }
     }
 
     public static void soma() {
@@ -30,6 +34,18 @@ public class Menu {
 
         System.out.println("A soma dos números é: " + (num1 + num2));
     }
+
+    public static void porcentagem() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("DIGITE O VALOR TOTAL: ");
+        double total = scanner.nextDouble();
+        System.out.println("DIGITE A PORCENTAGEM (%): ");
+        double porcentagem = scanner.nextDouble();
+
+        double resultado = (total * porcentagem) / 100;
+        System.out.println("O RESULTADO DA PORCENTAGEM É: " + resultado);
+    }
+
     public static void fatoracao() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite um número para fatoração: ");
