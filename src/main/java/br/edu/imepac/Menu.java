@@ -9,6 +9,7 @@ public class Menu {
         System.out.println("1 - SOMA");
         System.out.println("2 - PORCENTAGEM");
         System.out.println("3 - Fatorial");
+        System.out.println("4 - Tabuada");
 
 
         System.out.println("Escolha uma das opções: ");
@@ -18,11 +19,13 @@ public class Menu {
             soma();
         } else if (opcao == 2) {
             porcentagem();
-        }  else if (opcao == 2) {
+        } else if (opcao == 3) {
             fatoracao();
-        }else {
-                System.out.println("Opção inválida!");
-            }
+        } else if (opcao == 4) {
+            tabuada();
+        } else {
+            System.out.println("Opção inválida!");
+        }
     }
 
     public static void soma() {
@@ -59,5 +62,15 @@ public class Menu {
             }
         }
         System.out.println();
+    }
+
+    public static void tabuada() {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Digite o número para tabuada: ");
+        int numero = teclado.nextInt();
+        System.out.println("Aqui está a tabuada de " + numero + ":");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
     }
 }
