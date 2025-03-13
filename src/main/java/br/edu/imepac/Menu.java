@@ -8,7 +8,26 @@ public class Menu {
         System.out.println("1 - SOMA");
 
         soma();
+        verificar();
     }
+
+    public static void verificar() { // está em void porque nao irá retornar nada
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o número e retorno se é par: ");
+        int num_a_verificar = scanner.nextInt();
+
+        if (num_a_verificar %2 == 0) {
+            System.out.println(num_a_verificar + " é par");
+            //O if avalia a expressão booleana (num_a_verificar % 2 == 0):
+            //Se a condição for true (verdadeira), ele executa o bloco dentro do if.
+          // Se a condição for false (falsa), ele pula para o else e executa aquele bloco.
+        } else {
+            System.out.println(num_a_verificar + " é impar");
+        }
+
+    }
+
+
 
     public static void soma() {
         Scanner scanner = new Scanner(System.in);
