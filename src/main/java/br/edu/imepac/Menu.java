@@ -7,7 +7,10 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         System.out.println("MENU ------ ");
         System.out.println("1 - SOMA");
-        System.out.println("2 - Fatorial");
+        System.out.println("2 - PORCENTAGEM");
+        System.out.println("3 - Fatorial");
+        System.out.println("4 - Tabuada");
+
 
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
@@ -15,7 +18,11 @@ public class Menu {
         if (opcao == 1) {
             soma();
         } else if (opcao == 2) {
+            porcentagem();
+        } else if (opcao == 3) {
             fatoracao();
+        } else if (opcao == 4) {
+            tabuada();
         } else {
             System.out.println("Opção inválida!");
         }
@@ -29,6 +36,17 @@ public class Menu {
         int num2 = scanner.nextInt();
 
         System.out.println("A soma dos números é: " + (num1 + num2));
+    }
+
+    public static void porcentagem() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("DIGITE O VALOR TOTAL: ");
+        double total = scanner.nextDouble();
+        System.out.println("DIGITE A PORCENTAGEM (%): ");
+        double porcentagem = scanner.nextDouble();
+
+        double resultado = (total * porcentagem) / 100;
+        System.out.println("O RESULTADO DA PORCENTAGEM É: " + resultado);
     }
 
     public static void fatoracao() {
@@ -46,7 +64,10 @@ public class Menu {
         System.out.println();
     }
 
-    public static void tabuada(int numero) {
+    public static void tabuada() {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Digite o número para tabuada: ");
+        int numero = teclado.nextInt();
         System.out.println("Aqui está a tabuada de " + numero + ":");
         for (int i = 1; i <= 10; i++) {
             System.out.println(numero + " x " + i + " = " + (numero * i));
