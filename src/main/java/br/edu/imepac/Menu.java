@@ -6,8 +6,10 @@ public class Menu {
     public static void main(String[] args) {
         System.out.println("MENU ------ ");
         System.out.println("1 - SOMA");
+        System.out.println("X - MÉDIA");
 
         soma();
+        MediaNotas();
 
     }
 
