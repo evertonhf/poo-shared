@@ -9,7 +9,7 @@ public class Menu {
         System.out.println("1 - SOMA");
         System.out.println("2 - PORCENTAGEM");
         System.out.println("3 - Fatorial");
-
+        System.out.println("4 - Verificar se é par ou ímpar");
 
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
@@ -18,12 +18,31 @@ public class Menu {
             soma();
         } else if (opcao == 2) {
             porcentagem();
-        }  else if (opcao == 2) {
+        }  else if (opcao == 3) {
             fatoracao();
+        }  else if (opcao == 4) {
+            verificar();
         }else {
                 System.out.println("Opção inválida!");
             }
     }
+
+    public static void verificar() { // está em void porque nao irá retornar nada
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o número e retorno se é par ou ímpar: ");
+        int num_a_verificar = scanner.nextInt();
+
+        if (num_a_verificar %2 == 0) {
+            System.out.println(num_a_verificar + " é par");
+            //O if avalia a expressão booleana (num_a_verificar % 2 == 0):
+            //Se a condição for true (verdadeira), ele executa o bloco dentro do if.
+          // Se a condição for false (falsa), ele pula para o else e executa aquele bloco.
+        } else {
+            System.out.println(num_a_verificar + " é impar");
+        }
+
+    }
+
 
     public static void soma() {
         Scanner scanner = new Scanner(System.in);
