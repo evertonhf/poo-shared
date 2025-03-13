@@ -30,6 +30,7 @@ public class Menu {
 
         System.out.println("A soma dos números é: " + (num1 + num2));
     }
+
     public static void fatoracao() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite um número para fatoração: ");
@@ -43,5 +44,12 @@ public class Menu {
             }
         }
         System.out.println();
+    }
+
+    public static void tabuada(int numero) {
+        System.out.println("Aqui está a tabuada de " + numero + ":");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
     }
 }
