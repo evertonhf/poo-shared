@@ -1,9 +1,13 @@
 package br.edu.imepac;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Menu {
     public static void main(String[] args) {
+
+        System.out.println(randNum());
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("MENU ------ ");
         System.out.println("1 - SOMA");
@@ -44,4 +48,12 @@ public class Menu {
         }
         System.out.println();
     }
+
+    public static int randNum() {
+
+        Random rand = new Random();
+
+        return rand.nextInt(99) +1;
+    }
+
 }
