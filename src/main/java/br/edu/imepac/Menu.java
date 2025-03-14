@@ -12,6 +12,7 @@ public class Menu {
         System.out.println("4 - MULTIPLICACAO");
         System.out.println(("5 - SUB"));
         System.out.println("6 - Inversão de Palavra");
+        System.out.println("7 - MATRIZ");
 
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
@@ -28,6 +29,8 @@ public class Menu {
             sub();
         } else if (opcao == 6) {
             inverterPalavra();
+        } else if (opcao == 7) {
+            matriz();
         } else {
             System.out.println("Opção inválida!");
         }
@@ -42,6 +45,27 @@ public class Menu {
         int num2 = scanner.nextInt();
 
         System.out.println("A soma dos números é: " + (num1 + num2));
+    }
+
+    public static void matriz() {
+        Scanner scanner = new Scanner(System.in);
+
+        int[][] matriz = new int[2][2];
+
+        System.out.println("Digite os elememtos da Matriz:");
+        for (int i = 0; i < 2; i++) {
+            for (int x = 0; x < 2; x++) {
+                System.out.println("Elemento [" + i + "," + x + "]: ");
+                matriz[i][x] = scanner.nextInt();
+            }
+        }
+        System.out.println("Matriz " );
+        for (int i = 0; i < 2; i++){
+            for (int x = 0; x < 2; x++){
+                System.out.print(matriz[i][x] + "");
+            }
+            System.out.println();
+        }
     }
 
    public static void porcentagem() {
@@ -101,5 +125,11 @@ public class Menu {
         System.out.println("Palavra invertida: " + palavraInvertida.reverse().toString());
     }
 }
+
+
+
+
+
+
 
 
