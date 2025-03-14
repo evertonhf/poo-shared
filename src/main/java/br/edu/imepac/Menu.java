@@ -10,7 +10,7 @@ public class Menu {
         System.out.println("2 - PORCENTAGEM");
         System.out.println("3 - FATORIAL");
         System.out.println("4 - MULTIPLICACAO");
-
+        System.out.println(("5 - SUB"));
 
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
@@ -23,10 +23,13 @@ public class Menu {
             fatoracao();
         } else if (opcao == 4) {
             multiplicacao();
+        } else if (opcao == 5) {
+            sub();
         } else {
             System.out.println("Opção inválida!");
         }
     }
+
 
     public static void soma() {
         Scanner scanner = new Scanner(System.in);
@@ -71,4 +74,17 @@ public class Menu {
         int numero2 = scanner.nextInt();
         System.out.println("O resultado da multiplicação é " + numero1 * numero2 );
     }
+
+    public static void sub() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o primeiro número: ");
+        double num1 = scanner.nextDouble();
+        System.out.println("Digite o segundo número: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.println("A subtração dos dois números é: " + (num1 - num2));
+
+    }
+
+
 }
