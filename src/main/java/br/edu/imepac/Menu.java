@@ -11,6 +11,7 @@ public class Menu {
         System.out.println("3 - FATORIAL");
         System.out.println("4 - MULTIPLICACAO");
         System.out.println(("5 - SUB"));
+        System.out.println("6 - Inversão de Palavra");
 
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
@@ -25,6 +26,8 @@ public class Menu {
             multiplicacao();
         } else if (opcao == 5) {
             sub();
+        } else if (opcao == 6) {
+            inverterPalavra();
         } else {
             System.out.println("Opção inválida!");
         }
@@ -87,4 +90,16 @@ public class Menu {
     }
 
 
+
+    public static void inverterPalavra() {
+        Scanner read = new Scanner(System.in);
+        System.out.println("Digite uma PALAVRA: ");
+        String txl = read.nextLine();
+
+        StringBuilder palavraInvertida = new StringBuilder(txl);
+
+        System.out.println("Palavra invertida: " + palavraInvertida.reverse().toString());
+    }
 }
+
+
