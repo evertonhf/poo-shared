@@ -13,6 +13,7 @@ public class Menu {
         System.out.println(("5 - SUB"));
         System.out.println("6 - Inversão de Palavra");
         System.out.println("7 - MATRIZ");
+        System.out.println("8 - V OU F");
 
         System.out.println(("8 - DIV"));
         System.out.println("Escolha uma das opções: ");
@@ -34,6 +35,8 @@ public class Menu {
             inverterPalavra();
         } else if (opcao == 7) {
             matriz();
+        } else if (opcao == 8) {
+            VouF();
         } else {
             System.out.println("Opção inválida!");
         }
@@ -48,6 +51,30 @@ public class Menu {
         int num2 = scanner.nextInt();
 
         System.out.println("A soma dos números é: " + (num1 + num2));
+    }
+
+    public static void VouF(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        String input = scanner.nextLine();
+
+        boolean isReal = isNumeroReal(input);
+
+        if (isReal) {
+            System.out.println("Verdadeiro: O número é real.");
+        } else {
+            System.out.println("Falso: O número não é real.");
+        }
+    }
+
+    public static boolean isNumeroReal(String input) {
+        try {
+            Double.parseDouble(input);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+
     }
 
     public static void matriz() {
