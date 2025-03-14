@@ -11,7 +11,7 @@ public class Menu {
         System.out.println("3 - FATORIAL");
         System.out.println("4 - MULTIPLICACAO");
         System.out.println(("5 - SUB"));
-
+        System.out.println(("6 - DIV"));
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
 
@@ -25,7 +25,11 @@ public class Menu {
             multiplicacao();
         } else if (opcao == 5) {
             sub();
-        } else {
+        }
+            else if (opcao == 6){
+                divisao();
+            }
+            else {
             System.out.println("Opção inválida!");
         }
     }
@@ -85,6 +89,14 @@ public class Menu {
         System.out.println("A subtração dos dois números é: " + (num1 - num2));
 
     }
+public static void divisao(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite um numero: ");
+        int numero1 = scanner.nextInt();
+        System.out.println("Digite outro numero: ");
+        int numero2 = scanner.nextInt();
 
+        System.out.println("a divisão dos numeros é: " + (numero1 / numero2));
+    }
 
 }
