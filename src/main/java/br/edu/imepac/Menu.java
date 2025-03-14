@@ -35,7 +35,7 @@ public class Menu {
             }
         }
 
-        System.out.print("Matriz");
+        System.out.println("Matriz " );
         for (int i = 0; i < 2; i++){
             for (int x = 0; x < 2; x++){
                 System.out.print(matriz[i][x] + "");
