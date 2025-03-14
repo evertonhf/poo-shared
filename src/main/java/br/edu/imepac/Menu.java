@@ -11,7 +11,10 @@ public class Menu {
         System.out.println("3 - FATORIAL");
         System.out.println("4 - MULTIPLICACAO");
         System.out.println(("5 - SUB"));
-        System.out.println(("6 - DIV"));
+        System.out.println("6 - Inversão de Palavra");
+        System.out.println("7 - MATRIZ");
+
+        System.out.println(("8 - DIV"));
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
 
@@ -25,11 +28,13 @@ public class Menu {
             multiplicacao();
         } else if (opcao == 5) {
             sub();
-        }
-            else if (opcao == 6){
-                divisao();
-            }
-            else {
+        } else if (opcao == 6) {
+            divisao();
+        } else if (opcao == 8) {
+            inverterPalavra();
+        } else if (opcao == 7) {
+            matriz();
+        } else {
             System.out.println("Opção inválida!");
         }
     }
@@ -45,7 +50,28 @@ public class Menu {
         System.out.println("A soma dos números é: " + (num1 + num2));
     }
 
-   public static void porcentagem() {
+    public static void matriz() {
+        Scanner scanner = new Scanner(System.in);
+
+        int[][] matriz = new int[2][2];
+
+        System.out.println("Digite os elememtos da Matriz:");
+        for (int i = 0; i < 2; i++) {
+            for (int x = 0; x < 2; x++) {
+                System.out.println("Elemento [" + i + "," + x + "]: ");
+                matriz[i][x] = scanner.nextInt();
+            }
+        }
+        System.out.println("Matriz ");
+        for (int i = 0; i < 2; i++) {
+            for (int x = 0; x < 2; x++) {
+                System.out.print(matriz[i][x] + "");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void porcentagem() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("DIGITE O VALOR TOTAL: ");
         double total = scanner.nextDouble();
@@ -70,13 +96,14 @@ public class Menu {
         }
         System.out.println();
     }
-    public static void multiplicacao(){
+
+    public static void multiplicacao() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite um numero: ");
         int numero1 = scanner.nextInt();
         System.out.println("Digite outro numero: ");
         int numero2 = scanner.nextInt();
-        System.out.println("O resultado da multiplicação é " + numero1 * numero2 );
+        System.out.println("O resultado da multiplicação é " + numero1 * numero2);
     }
 
     public static void sub() {
@@ -89,7 +116,8 @@ public class Menu {
         System.out.println("A subtração dos dois números é: " + (num1 - num2));
 
     }
-public static void divisao(){
+
+    public static void divisao() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite um numero: ");
         int numero1 = scanner.nextInt();
@@ -99,4 +127,22 @@ public static void divisao(){
         System.out.println("a divisão dos numeros é: " + (numero1 / numero2));
     }
 
+
+    public static void inverterPalavra() {
+        Scanner read = new Scanner(System.in);
+        System.out.println("Digite uma PALAVRA: ");
+        String txl = read.nextLine();
+
+        StringBuilder palavraInvertida = new StringBuilder(txl);
+
+        System.out.println("Palavra invertida: " + palavraInvertida.reverse().toString());
+    }
 }
+
+
+
+
+
+
+
+
