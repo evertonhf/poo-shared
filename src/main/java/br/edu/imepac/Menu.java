@@ -8,7 +8,7 @@ public class Menu {
         System.out.println("MENU ------ ");
         System.out.println("1 - SOMA");
         System.out.println("2 - PORCENTAGEM");
-        System.out.println("3 - FATORIAL");
+        System.out.println("3 - FATORAÇÃO");
         System.out.println("4 - MULTIPLICACAO");
         System.out.println(("5 - SUB"));
         System.out.println("6 - Inversão de Palavra");
