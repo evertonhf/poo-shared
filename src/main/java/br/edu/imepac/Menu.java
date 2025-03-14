@@ -14,8 +14,8 @@ public class Menu {
         System.out.println("6 - Inversão de Palavra");
         System.out.println("7 - MATRIZ");
         System.out.println("8 - V OU F");
+        System.out.println(("9 - DIV"));
 
-        System.out.println(("8 - DIV"));
         System.out.println("Escolha uma das opções: ");
         int opcao = scanner.nextInt();
 
@@ -30,13 +30,13 @@ public class Menu {
         } else if (opcao == 5) {
             sub();
         } else if (opcao == 6) {
-            divisao();
-        } else if (opcao == 8) {
             inverterPalavra();
         } else if (opcao == 7) {
             matriz();
         } else if (opcao == 8) {
             VouF();
+        } else if (opcao == 9) {
+            divisao();
         } else {
             System.out.println("Opção inválida!");
         }
